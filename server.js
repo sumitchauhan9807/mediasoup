@@ -23,7 +23,7 @@ const createWebRtcTransportBothKinds = require('./createWebRtcTransportBothKinds
 //set up the socketio server, listening by way of our express https sever
 const io = socketio(httpsServer,{
     cors: [`http://localhost:${config.port}`],
-    cors: [`https://globalfun.cam`]
+    cors: [`https://test.globalfun.cam`]
 })
 
 //our globals
