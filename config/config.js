@@ -1,5 +1,5 @@
 module.exports = {
-  port: 3030,
+  port: 2020,
   workerSettings: {
     rtcMinPort: 40000,
     rtcMaxPort: 41000,
