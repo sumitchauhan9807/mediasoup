@@ -11,7 +11,9 @@ let consumer = null
 // connect to the server
 const initConnect = ()=>{
     // console.log("Init connect")
-    socket = io('https://localhost:3030')
+    // socket = io('http://localhost:2020')
+    socket = io('https://test.globalfun.cam')
+
     connectButton.innerHTML = "Connecting..."
     connectButton.disabled = true
     // keep the socket listeners in their own place

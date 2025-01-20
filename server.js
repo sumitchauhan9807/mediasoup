@@ -1,5 +1,5 @@
 const fs = require('fs') //we need this to read our keys. Part of node
-const https = require('https') //we need this for a secure express server. part of node
+const https = require('http') //we need this for a secure express server. part of node
 //express sets up the http server and serves our front end
 const express = require('express')
 const app = express()
@@ -11,6 +11,11 @@ const key = fs.readFileSync('./config/cert.key')
 const cert = fs.readFileSync('./config/cert.crt')
 const options = {key,cert}
 //use those keys with the https module to have https
+console.log("HEREEE")
+app.get("/",(req,res,next)=>{
+    res.send("hello from global fun")
+    // res.sendFile(path.join(__dirname,"../", 'front-end/index.html'));
+  })
 const httpsServer = https.createServer(app)
 
 const socketio = require('socket.io')
@@ -44,6 +49,8 @@ const initMediaSoup = async()=>{
 }
 
 initMediaSoup() //build our mediasoup server/sfu
+
+
 
 // socketIo listeners
 io.on('connect', socket=>{
@@ -154,4 +161,5 @@ io.on('connect', socket=>{
     })
 })
 
+console.log(config.port)
 httpsServer.listen(config.port)
