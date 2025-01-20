@@ -18,7 +18,7 @@ const createWebRtcTransportBothKinds = (router)=>new Promise(async(resolve, reje
             }
         ]
     })
-    // console.log(transport)
+    console.log(transport)
     const clientTransportParams = {
         id: transport.id,
         iceParameters: transport.iceParameters,
