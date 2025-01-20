@@ -7,14 +7,14 @@ const createWebRtcTransportBothKinds = (router)=>new Promise(async(resolve, reje
             {
                 protocol: 'udp',
                 ip: '65.109.126.185',
-                port:443
+                // port:443
                 // ip: '0.0.0.0',
                 // announcedIp: '127.0.0.1',
             },
             {
                 protocol: 'tcp',
                 ip: '65.109.126.185',
-                port:443
+                // port:443
                 // ip: '0.0.0.0',
                 // announcedIp: '127.0.0.1',
             }
